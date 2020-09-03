@@ -69,3 +69,30 @@ body {
 .display-1 {
   opacity: 0.3;
 }
+#parent {
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 55px;
+  animation: typewriter 4s steps(50) 0.5s 1 normal both,
+    cursorblink 0.5s infinite;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 300px;
+  }
+}
+
+@keyframes cursorblink {
+  from {
+    border-right: 1px solid #000000;
+  }
+
+  to {
+    border-right-color: transparent;
+  }
+}
