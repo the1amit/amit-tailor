@@ -66,10 +66,14 @@ body {
   padding-bottom: 100px;
 }
 
+.display-1 {
+  opacity: 0.3;
+}
 #parent {
   white-space: nowrap;
   font-size: 55px;
   overflow: hidden;
+  font-size: 55px;
   animation: typewriter 4s steps(50) 0.5s 1 normal both,
     cursorblink 0.5s infinite;
 }
