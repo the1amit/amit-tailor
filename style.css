@@ -68,6 +68,7 @@ body {
 
 #parent {
   white-space: nowrap;
+  font-size: 55px;
   overflow: hidden;
   animation: typewriter 4s steps(50) 0.5s 1 normal both,
     cursorblink 0.5s infinite;
@@ -79,7 +80,7 @@ body {
   }
 
   to {
-    width: 500px;
+    width: 300px;
   }
 }
 
