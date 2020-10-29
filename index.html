@@ -41,7 +41,7 @@
   </head>
   <body data-spy="scroll" data-target=".nav-tabs" data-offset="50">
     <div class="container-fluid">
-      <ul id="myNavbar" class="nav nav-tabs justify-content-center bg-light fixed-top">
+      <ul id="myNavbar" class="nav nav-tabs justify-content-center fixed-top">
         <li class="nav-item icon-zoom mr-3">
           <a class="nav-link" href="#home"><i class="fas fa-home"></i></a>
         </li>
@@ -56,41 +56,51 @@
         </li>
       </ul>
     </div>
-    <div id="home" class="container-fluid ">
-      <div id="parent">Hello World, </div>
-      <h2>I'm <b>Amit Tailor !</b></h2>
-      <h4>Web Developer/Programmer ;)</h4><br>
-      <a id="resumebtn" href="/Amit Tailor 1.2.pdf" class="btn btn-outline-primary btn-lg" target="_blank" download>Resume <i class="fas fa-arrow-down"></i></a>
-    </div>
+    <div id="home" class="container-fluid text-primary">
+      <div class="home-data">
+        <div id="parent">Hello World, </div>
+        <h2>I'm <b>Amit Tailor !</b></h2>
+        <h4>Web Developer/Programmer ;)</h4><br>
+        <a 
+          id="resumebtn" 
+          href="/Amit Tailor 1.3.pdf" 
+          class="btn btn-outline-primary btn-lg" 
+          target="_blank" 
+          download>
+            Resume <i class="fas fa-arrow-down"></i>
+        </a>
+  
+      </div>
+          </div>
 
     <div id="about" class="container-fluid">
     <h1 class=" display-1 text-center">skills</h1>
     <div class="container">
       <div class="row text-center">
         <div class="col-sm-3">
-          <p><button class="btn btn-outline-primary btn-block">HTML</button></p>
-          <p><button class="btn btn-outline-primary btn-block">CSS</button></p>
-          <p><button class="btn btn-outline-primary btn-block">BOOTSTRAP</button></p>
-          <p><button class="btn btn-outline-primary btn-block">JAVASCRIPT</button></p>
-          <p><button class="btn btn-outline-primary btn-block">jQuery</button></p>
+          <p><button class="btn btn-outline-dark btn-block">HTML</button></p>
+          <p><button class="btn btn-outline-dark btn-block">CSS</button></p>
+          <p><button class="btn btn-outline-dark btn-block">BOOTSTRAP</button></p>
+          <p><button class="btn btn-outline-dark btn-block">JAVASCRIPT</button></p>
+          <p><button class="btn btn-outline-dark btn-block">jQuery</button></p>
         </div>
         <div class="col-sm-3">
-          <p><button class="btn btn-outline-primary btn-block">Java</button></p>
-          <p><button class="btn btn-outline-primary btn-block">C</button></p>
-          <p><button class="btn btn-outline-primary btn-block">C++</button></p>
-          <p><button class="btn btn-outline-primary btn-block">Python</button></p> 
+          <p><button class="btn btn-outline-dark btn-block">Java</button></p>
+          <p><button class="btn btn-outline-dark btn-block">C</button></p>
+          <p><button class="btn btn-outline-dark btn-block">C++</button></p>
+          <p><button class="btn btn-outline-dark btn-block">Python</button></p> 
         </div>
         <div class="col-sm-3">
-          <p><button class="btn btn-outline-primary btn-block">SQL</button></p>
-          <p><button class="btn btn-outline-primary btn-block">PL/SQL</button></p>
-          <p><button class="btn btn-outline-primary btn-block">SQL Server</button></p>
-          <p><button class="btn btn-outline-primary btn-block">XML</button></p>  
+          <p><button class="btn btn-outline-dark btn-block">SQL</button></p>
+          <p><button class="btn btn-outline-dark btn-block">PL/SQL</button></p>
+          <p><button class="btn btn-outline-dark btn-block">SQL Server</button></p>
+          <p><button class="btn btn-outline-dark btn-block">XML</button></p>  
         </div>
         <div class="col-sm-3">
-          <p><button class="btn btn-outline-primary btn-block">GitHub</button></p>
-          <p><button class="btn btn-outline-primary btn-block">JIRA</button></p>
-          <p><button class="btn btn-outline-primary btn-block">Visual Studio Code</button></p>
-          <p><button class="btn btn-outline-primary btn-block">Git</button></p>  
+          <p><button class="btn btn-outline-dark btn-block">GitHub</button></p>
+          <p><button class="btn btn-outline-dark btn-block">JIRA</button></p>
+          <p><button class="btn btn-outline-dark btn-block">Visual Studio Code</button></p>
+          <p><button class="btn btn-outline-dark btn-block">Git</button></p>  
         </div>
       </div>
     </div>
@@ -132,11 +142,11 @@
               </a>
               </div>
               <div class="col-lg-4">
-                <a href="#" class="thumbnail">
-                <img class="project_img" src="http://placehold.it/300x300/0ff" alt="Image" style="max-width:100%;">
+                <a href="https://tinder-clone-b8893.web.app/" class="thumbnail" target="_blank">
+                <img class="project_img" src="Screenshots/tinder-clone.png" alt="Image" style="max-width:100%;">
                 <div class="carousel-caption">
-                  <strong>Project 3</strong><br /> 
-                  <strong>Working on</strong>
+                  <strong>Tinder Clone</strong><br /> 
+                  <strong>MERN Stack</strong>
                 </div>
               </a>
               </div>
@@ -189,6 +199,7 @@
 
 <div id="contact" class="container-fluid">
 <h1 class="display-1 text-center">contact</h1><br>
+<h5 class="text-center">Feel free to reach out through any platforms below:</h5><br>
 <div class="row text-center ">
   <p class="col-lg-3" >
     <a class="link-contact" href="https://github.com/the1amit">
@@ -217,12 +228,35 @@
 </div>
 
 </div>
+<a href="#" id="back-to-top" title="Back to top">&uarr;</a>
 <footer class="text-center">Website by amIT</footer>
 </div>
 
 <script>
   $(document).ready(function(){
-   
+
+    if ($('#back-to-top').length) {
+    var scrollTrigger = 100, // px
+        backToTop = function () {
+            var scrollTop = $(window).scrollTop();
+            if (scrollTop > scrollTrigger) {
+                $('#back-to-top').addClass('show');
+            } else {
+                $('#back-to-top').removeClass('show');
+            }
+        };
+    backToTop();
+    $(window).on('scroll', function () {
+        backToTop();
+    });
+    $('#back-to-top').on('click', function (e) {
+        e.preventDefault();
+        $('html,body').animate({
+            scrollTop: 0
+        }, 700);
+    });
+}
+
     // Add smooth scrolling on all links inside the navbar
     $("#myNavbar a").on('click', function(event) {
       // Make sure this.hash has a value before overriding default behavior
@@ -243,6 +277,7 @@
           window.location.hash = hash;
         });
       }  // End if
+    
     });
   });
   </script>

@@ -1,3 +1,14 @@
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
 .icon-zoom {
   font-size: 30px;
 }
@@ -46,36 +57,48 @@ body {
 .carousel-caption > strong {
   background-color: white;
 }
-.carousel-control-next,
-.carousel-control-prev {
-  filter: invert(100%);
+
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%230275d8' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
 }
 
-#home {
-  background-color: #48cae4;
-  color: #0077b6;
-  padding-top: 100px;
-  padding-bottom: 100px;
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%230275d8' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
 }
+#home {
+  background-color: #010101;
+  height: 100vh !important;
+}
+.home-data {
+  padding-top: 30vh;
+  padding-left: 10vw;
+}
+
 #about {
-  background-color: #ade8f4;
+  background-color: white;
   padding-top: 100px;
   padding-bottom: 100px;
 }
 #projects {
-  background-color: #90e0ef;
+  background-color: #010101;
   padding-top: 100px;
   padding-bottom: 100px;
 }
 #contact {
-  background-color: #48cae4;
+  background-color: white;
   padding-top: 100px;
-  padding-bottom: 100px;
+  padding-bottom: 185px;
+}
+.display-1 {
+  padding-bottom: 10vh;
+  opacity: 0.3;
+  color: lightgray !important;
+}
+#contact > h5 {
+  padding-bottom: 10vh;
+  opacity: 0.7;
 }
 
-.display-1 {
-  opacity: 0.3;
-}
 #parent {
   white-space: nowrap;
   font-size: 55px;
@@ -104,8 +127,51 @@ body {
     border-right-color: transparent;
   }
 }
+#myNavbar {
+  border: none;
+}
 
 .project_img {
   height: 300px;
   width: 300px;
+}
+.nav-tabs .nav-link {
+  background-color: transparent !important;
+  border: none !important;
+}
+
+.fas:hover,
+.icon:hover,
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+  transition: tranform 0.2s ease-in-out;
+  transform: scale(1.2) !important;
+}
+
+#back-to-top {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 9999;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  line-height: 30px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  border: 1px solid;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: opacity 0.2s ease-out;
+  opacity: 0;
+}
+
+#back-to-top:hover {
+  background-color: black;
+  color: white;
+}
+
+#back-to-top.show {
+  opacity: 1;
 }
