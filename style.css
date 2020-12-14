@@ -13,7 +13,7 @@ body {
   font-size: 30px;
 }
 .link-contact {
-  text-decoration: none;
+  text-decoration: none !important;
   color: black;
 }
 .icon {
@@ -68,6 +68,7 @@ body {
 #home {
   background-color: #010101;
   height: 100vh !important;
+  min-height: 350px;
 }
 .home-data {
   padding-top: 30vh;
