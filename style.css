@@ -16,6 +16,10 @@ body {
   text-decoration: none !important;
   color: black;
 }
+.link-contact:hover {
+  text-decoration: none !important;
+  color: black;
+}
 .icon {
   font-size: 30px;
 }
